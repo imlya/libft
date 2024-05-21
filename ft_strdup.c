@@ -42,11 +42,11 @@ char	*ft_strdup(const char *s)
 	return (dup_s);
 }
 
-/*int main(void)
+int main(void)
 {
 	char src[] = "Couc";
 
 	__builtin_printf("%s\n", ft_strdup(src));
 
 	return (0);
-}*/
+}

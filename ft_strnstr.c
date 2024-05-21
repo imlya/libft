@@ -29,7 +29,7 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 				return (haystack);
 		}
 	}
-	return ("yo");
+	return ();
 }
 
 /*int	main()

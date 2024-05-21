@@ -28,6 +28,7 @@ void	ft_bzero(void *s, size_t n)
 	char	str[] = "hello";
 	
 	ft_bzero(str + 1, 4);
-	__builtin_printf("%c\n, %c, %c, %c, %c", str[0], str[1], str[2], str[3], str[4]);
+	__builtin_printf("%c\n, %c, %c, %c, %c", 
+		str[0], str[1], str[2], str[3], str[4]);
 	return (0);
 }*/

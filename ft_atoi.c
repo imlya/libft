@@ -39,8 +39,8 @@ int	ft_atoi(const char *nptr)
 
 /*int main()
 {
-	__builtin_printf("%d\n", ft_atoi("   +456"));
-	__builtin_printf("%d\n", atoi("   +456"));
+	__builtin_printf("%d\n", ft_atoi("   +-456"));
+	__builtin_printf("%d\n", atoi("   +-456"));
 
 	return(0);
 }*/

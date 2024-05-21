@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 	char	*s_src;
@@ -30,7 +30,6 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
 			s_dest[i] = s_src[i];
 			i++;
 		}
-		return (dest);
 	}
 	else
 	{
@@ -40,12 +39,12 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
 			s_dest[i] = s_src[i];
 			i--;
 		}
-		return (dest);
 	}
+	return (dest);
 }
 
-int	main()
+/*int	main()
 {
 	__builtin_printf("%s", (char *)ft_memmove("hello", "youu", 1));
 	return (0);
-}
+}*/
