@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:05:41 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/21 13:28:48 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/22 15:28:36 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		if (s_s1[i] == s_s2[i])
 			i++;
 		else
-			return ((unsigned char)s1[i] - (unsigned char) s2[i]);
+			return (s_s1[i] - s_s2[i]);
 	}
 	return (0);
 }

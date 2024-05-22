@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:05:48 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/21 14:59:35 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/22 15:12:16 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	s_src = (char *)src;
 	s_dest = (char *)dest;
-	if (!src)
-		return (NULL);
+	if (!src || !dest)
+		return (dest);
 	if (dest < src)
 	{
-		i = 0;
-		while (s_src[i] && i < n)
-		{
+		i = -1;
+		while (s_src[++i] && i < n)
 			s_dest[i] = s_src[i];
-			i++;
-		}
 	}
 	else
 	{

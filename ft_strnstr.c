@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:06:26 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/21 11:06:27 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/22 17:52:32 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ char	*ft_strnstr(char *haystack, char *needle, size_t len)
 		while (needle[j])
 		{
 			if (haystack [i + j] == needle [j])
-				return (haystack);
+				return (&haystack[i]);
 		}
 	}
-	return ();
+	return (NULL);
 }
 
 /*int	main()
