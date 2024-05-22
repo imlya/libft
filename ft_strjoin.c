@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 11:06:01 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/22 19:46:04 by imatek           ###   ########.fr       */
+/*   Created: 2024/05/22 18:48:45 by imatek            #+#    #+#             */
+/*   Updated: 2024/05/22 20:25:43 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,31 +21,39 @@
 		i++;
 	return (i);
 }*/
-char	*ft_strdup(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*dup_s;
-	int		len;
 	int		i;
+	int		j;
+	int		len;
+	char	*join;
 
-	i = 0;
-	len = ft_strlen(s) + 1;
-	dup_s = malloc(len * sizeof(char));
-	if (!dup_s)
+	i = -1;
+	j = 0;
+	len = ft_strlen(s1) + ft_strlen(s2);
+	join = malloc (sizeof(char) * (len + 1));
+	if (!join)
 		return (NULL);
-	while (s[i])
+	while (s1[++i])
 	{
-		dup_s[i] = s[i];
-		i++;
+		join[j] = s1[i];
+		j++;
 	}
-	dup_s[i] = '\0';
-	return (dup_s);
+	i = -1;
+	while (s2[++i])
+	{
+		join[j] = s2[i];
+		j++;
+	}
+	join[j] = '\0';
+	return (join);
 }
 
-/*int main(void)
+/*int	main()
 {
-	char src[] = "Couc";
-
-	__builtin_printf("%s\n", ft_strdup(src));
-
+	char	*s1 = "hello";
+	char	*s2 = "ca va";
+	
+	__builtin_printf("%s", ft_strjoin(s1, s2));
 	return (0);
 }*/
