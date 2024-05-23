@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 16:30:33 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/22 20:47:07 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/23 13:40:39 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 //ft_strlen new_s + start < len 
 
-int	main(void)
+/*int	main(void)
 {
 	char src[] = "Coucouuuu";
 
 	__builtin_printf("%s\n", ft_substr(src, -1, 5));
 	return (0);
-}
+}*/
