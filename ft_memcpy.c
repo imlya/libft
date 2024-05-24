@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:05:44 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/21 12:07:34 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/24 14:38:07 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*s_src;
 	char	*s_dest;
 
+	if (!src && !dest)
+		return (NULL);
 	s_src = (char *)src;
 	s_dest = (char *)dest;
-	if (!src || !dest)
-		return (NULL);
 	i = 0;
 	while (i < n)
 	{
 		s_dest[i] = s_src[i];
 		i++;
 	}
-	s_dest[i] = '\0';
 	return (dest);
 }
 

@@ -6,22 +6,15 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 19:36:51 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/22 23:15:13 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/24 11:23:27 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
+size_t	ft_strlen(const char *s);
 
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-char	ft_isCharSet(char const *set, char c)
+char	ft_is_charset(char const *set, char c)
 {
 	int	i;
 
@@ -43,10 +36,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*new_s;
 
 	i = 0;
-	while (ft_isCharSet(set, s1[i]) == 1)
+	while (ft_is_charset(set, s1[i]) == 1)
 		i++;
 	j = ft_strlen(s1) - 1;
-	while (ft_isCharSet(set, s1[j]) == 1)
+	while (ft_is_charset(set, s1[j]) == 1)
 		j--;
 	new_s = malloc (sizeof(char) * ((j - i) + 1));
 	if (!new_s)
@@ -61,8 +54,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new_s[k] = '\0';
 	return (new_s);
 }
-int	main()
+/*int	main()
 {
 	__builtin_printf("%s", ft_strtrim("  .jfesf s. kdf  ", " ."));
 	return (0);
-}
+}*/

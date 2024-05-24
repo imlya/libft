@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:05:52 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/21 12:36:01 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/24 13:47:34 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,18 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	i = 0;
 	str = (char *)s;
-	if (!str)
-		return (NULL);
 	while (i < n)
 	{
-		str[i++] = c;
+		str[i] = c;
+		i++;
 	}
 	return (s);
 }
 
 /*int	main()
 {
-	char	str[] = "hello";
+	char	str[] = "ghgjdjj";
 	
-	__builtin_printf("%s", (char *)ft_memset(str, 'a', 5));
+	__builtin_printf("%s", (char *)ft_memset(str, 'a', 12));
 	return (0);
 }*/
