@@ -6,13 +6,11 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 19:36:51 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/24 11:23:27 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/25 22:31:35 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 char	ft_is_charset(char const *set, char c)
 {

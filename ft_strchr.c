@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:05:56 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/22 17:47:08 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/25 23:25:24 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,21 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int		i;
+	char	*str;
+	char	set;
 
+	str = (char *)s;
+	set = (char)c;
 	i = 0;
-	while (s[i])
+	while (str[i])
 	{
-		if (s[i] != c)
+		if (str[i] != set)
 			i++;
 		else
-			return ((char *)s);
+			return (&str[i]);
 	}
+	if (str[i] == set)
+		return (&str[i]);
 	return (NULL);
 }

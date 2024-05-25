@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:06:07 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/22 19:46:35 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/25 19:39:15 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,27 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
+	size_t	result;
 
 	i = 0;
 	j = 0;
-	if (j > size)
-		return (0);
-	while (dst[j])
-		j++;
-	while (src[i] && i + j < (size - 1))
-	{
-		dst[j] = src[i];
-		j++;
+	result = 0;
+	while (dst[i])
 		i++;
+	while (src[result])
+		result++;
+	if (size <= i)
+		result += size;
+	else
+		result += i;
+	while (src[j] && (i + 1) < size)
+	{
+		dst[i] = src[j];
+		i++;
+		j++;
 	}
-	dst[j] = '\0';
-	return (j);
+	dst[i] = '\0';
+	return (result);
 }
 
 /*int main(void)

@@ -6,28 +6,32 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:06:13 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/24 12:51:28 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/25 17:50:57 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, char *src, size_t size)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	size_t	i;
+	size_t	j;
 
 	i = 0;
+	j = 0;
 	if (i > size)
 		return (0);
-	while (src[i] && i < (size - 1))
+	while (src[j])
+		j++;
+	if (size < 1)
+		return (j);
+	while (src[i] && i < size - 1)
 	{
-		dst[i] = src[i];
+		dest[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	while (src[i])
-		i++;
-	return (i);
+	dest[i] = '\0';
+	return (j);
 }
 
 /*int main(void)
