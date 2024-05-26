@@ -6,7 +6,7 @@
 #    By: imatek <imatek@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/24 09:41:30 by imatek            #+#    #+#              #
-#    Updated: 2024/05/26 18:08:49 by imatek           ###   ########.fr        #
+#    Updated: 2024/05/26 18:31:22 by imatek           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,4 +46,4 @@ fclean : clean
 
 re : fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
