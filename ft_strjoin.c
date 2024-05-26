@@ -6,21 +6,12 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 18:48:45 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/22 20:25:43 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/26 15:07:25 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;

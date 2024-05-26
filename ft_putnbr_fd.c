@@ -1,42 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 11:06:01 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/26 15:07:13 by imatek           ###   ########.fr       */
+/*   Created: 2024/05/26 17:04:02 by imatek            #+#    #+#             */
+/*   Updated: 2024/05/26 17:26:26 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*dup_s;
-	int		len;
-	int		i;
-
-	i = 0;
-	len = ft_strlen(s) + 1;
-	dup_s = malloc(len * sizeof(char));
-	if (!dup_s)
-		return (NULL);
-	while (s[i])
+	if (n == -2147483648)
 	{
-		dup_s[i] = s[i];
-		i++;
+		write (fd, "-2147483648", 11);
 	}
-	dup_s[i] = '\0';
-	return (dup_s);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n >= 0 && n < 10)
+		ft_putchar_fd ((n + '0'), fd);
+	else
+	{
+		ft_putnbr_fd ((n / 10), fd);
+		ft_putnbr_fd ((n % 10), fd);
+	}
 }
-
-/*int main(void)
-{
-	char src[] = "Couc";
-
-	__builtin_printf("%s\n", ft_strdup(src));
-
-	return (0);
-}*/

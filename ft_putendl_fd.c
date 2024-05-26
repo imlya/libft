@@ -1,42 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 11:06:01 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/26 15:07:13 by imatek           ###   ########.fr       */
+/*   Created: 2024/05/26 17:03:59 by imatek            #+#    #+#             */
+/*   Updated: 2024/05/26 17:30:10 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*dup_s;
-	int		len;
-	int		i;
+	int	i;
 
 	i = 0;
-	len = ft_strlen(s) + 1;
-	dup_s = malloc(len * sizeof(char));
-	if (!dup_s)
-		return (NULL);
 	while (s[i])
 	{
-		dup_s[i] = s[i];
+		write(fd, &s[i], 1);
 		i++;
 	}
-	dup_s[i] = '\0';
-	return (dup_s);
+	write (fd, "\n", 1);
 }
-
-/*int main(void)
-{
-	char src[] = "Couc";
-
-	__builtin_printf("%s\n", ft_strdup(src));
-
-	return (0);
-}*/
