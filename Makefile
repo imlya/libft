@@ -6,7 +6,7 @@
 #    By: imatek <imatek@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/24 09:41:30 by imatek            #+#    #+#              #
-#    Updated: 2024/05/26 18:03:22 by imatek           ###   ########.fr        #
+#    Updated: 2024/05/26 18:08:49 by imatek           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ FILES= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
 		ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 		
-FILES_BONUS= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+FILES_BONUS= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 CC= cc
 FLAGS= -Wall -Wextra -Werror
