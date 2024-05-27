@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/26 18:09:32 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/26 18:16:06 by imatek           ###   ########.fr       */
+/*   Created: 2024/05/26 18:09:13 by imatek            #+#    #+#             */
+/*   Updated: 2024/05/27 22:15:59 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
+	if (lst)
+		ft_lstdelone(*lst, del);
+	*lst = NULL;
 }

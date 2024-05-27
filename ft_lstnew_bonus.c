@@ -1,17 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/26 18:09:38 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/26 18:18:18 by imatek           ###   ########.fr       */
+/*   Created: 2024/05/26 18:09:46 by imatek            #+#    #+#             */
+/*   Updated: 2024/05/27 18:58:12 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstnew(void *content)
 {
+	t_list	*new;
+
+	new = malloc(sizeof(struct s_list));
+	if (!new)
+		return (NULL);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
+/*{
+	__builtin_printf("%s", (char *)ft_lstnew("hello"));
+	return(0);
+}*/

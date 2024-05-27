@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 11:06:07 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/25 19:39:15 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/27 16:00:23 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ size_t	ft_strlcat(char *dst, char *src, size_t size)
 
 /*int main(void)
 {
-	char src[] = "Coucouuuu";
+	char src[] = "Couu";
 	char dst[] = "Helloo";
 		// j doit etre < a i 
-	size_t size = 97;
+	size_t size = 20;
 
 	__builtin_printf("%ld\n", ft_strlcat(dst, src, size));
 

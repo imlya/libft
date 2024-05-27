@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/26 18:09:13 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/26 18:17:43 by imatek           ###   ########.fr       */
+/*   Created: 2024/05/26 18:09:18 by imatek            #+#    #+#             */
+/*   Updated: 2024/05/27 21:37:34 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (lst)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

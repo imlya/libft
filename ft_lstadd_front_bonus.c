@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/26 18:09:53 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/26 18:16:22 by imatek           ###   ########.fr       */
+/*   Created: 2024/05/26 18:09:05 by imatek            #+#    #+#             */
+/*   Updated: 2024/05/27 21:33:38 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (lst)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
 }
