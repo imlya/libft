@@ -23,7 +23,7 @@ FILES_BONUS= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 			ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 CC= cc
 FLAGS= -Wall -Wextra -Werror
-INCLUDE= libft.h
+INCLUDE= include
 OBJS= $(FILES:.c=.o)
 OBJS_BONUS= $(FILES_BONUS:.c=.o)
 
