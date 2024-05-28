@@ -6,7 +6,7 @@
 #    By: imatek <imatek@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/24 09:41:30 by imatek            #+#    #+#              #
-#    Updated: 2024/05/27 19:33:25 by imatek           ###   ########.fr        #
+#    Updated: 2024/05/28 11:26:38 by imatek           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FILES= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		
 FILES_BONUS= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c
+			ft_lstclear_bonus.c ft_lstiter_bonus.c
 CC= cc
 FLAGS= -Wall -Wextra -Werror
 INCLUDE= include
