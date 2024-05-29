@@ -6,7 +6,7 @@
 /*   By: imatek <imatek@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 12:03:29 by imatek            #+#    #+#             */
-/*   Updated: 2024/05/28 17:10:54 by imatek           ###   ########.fr       */
+/*   Updated: 2024/05/30 01:47:09 by imatek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,11 @@ char	*ft_itoa(int n)
 	if (nbr == 0)
 	{
 		array = malloc(sizeof(char) * 2);
-		if (array)
+		if (!array)
 			return (NULL);
+		array[0] = '0';
+		array[1] = '\0';
+		return (array);
 	}
 	if (nbr < 0)
 	{
@@ -77,15 +80,11 @@ char	*ft_itoa(int n)
 		return (NULL);
 	while (nbr != 0)
 	{
-		array[j] = ((nbr % 10) + '0');
+		array[j++] = ((nbr % 10) + '0');
 		nbr /= 10;
-		j++;
 	}
 	if (sign == -1)
-	{
-		array[j] = '-';
-		j++;
-	}
+		array[j++] = '-';
 	array[j] = '\0';
 	return (ft_reverse(array));
 }
